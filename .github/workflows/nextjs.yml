@@ -47,11 +47,6 @@ jobs:
         working-directory: react
         run: pnpm build
 
-      # Next.js를 GitHub Pages에 올리려면 out 폴더가 필요해서 export를 추가
-      - name: Export static site
-        working-directory: react
-        run: pnpm exec next export
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
